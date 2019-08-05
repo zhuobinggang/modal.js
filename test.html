@@ -1,0 +1,41 @@
+<html>
+	<head>
+	</head>
+	<body>
+
+		<button onclick="Modal.show('aa')">aa</button>
+		<button onclick="Modal.show('bb')">bb</button>
+		<button onclick="clickCc()">alert what you input</button>
+
+		<div id="aa" class="modal">
+			aa
+		</div>
+
+		<div id="bb" class="modal">
+			bb
+		</div>
+
+		<div id="cc" class="modal">
+			<label>输入数值: <input name="amount" /></label>
+			<button onclick="returnData()">确定</button>
+		</div>
+
+
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+		<script src="./kobako-modal.js" ></script>
+		<script>
+
+function returnData(){
+	Modal.hide($('input[name="amount"]').val());
+}
+
+
+function clickCc(){
+	Modal.show('cc', (whatYouInput) => {
+		alert(whatYouInput);
+	})
+}
+
+		</script>
+	</body>
+</html>
