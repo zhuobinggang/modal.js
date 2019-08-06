@@ -35,6 +35,7 @@ function addStyleToModal(){
   	padding: '20px',
   	border: '1px solid #888',
   	display: 'inline-block',
+	border-radius: '10px',
   });
 
 	$('.modal').on('click', (e) => {
