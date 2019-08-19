@@ -35,11 +35,17 @@ function addStyleToModal(){
   	padding: '20px',
   	border: '1px solid #888',
   	display: 'inline-block',
-	border-radius: '10px',
+	'border-radius': '10px',
   });
 
+    /*
 	$('.modal').on('click', (e) => {
 		e.stopPropagation();
+	});
+	*/
+
+    $('.modal').click((e) => {
+		e.stopPropagation();		
 	});
 
 }
@@ -47,7 +53,12 @@ function addStyleToModal(){
 function addClickEventToModalContainer(){
   $.each($('.modal-container'), function(){
   	const $modal = $(this);
-  	$modal.on('click', () => {
+  	/*
+	$modal.on('click', () => {
+			hide();
+  	});
+	*/
+	$modal.click(() => {
 			hide();
   	});
   });
